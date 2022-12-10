@@ -1,8 +1,1 @@
-function solution(a, b) {
-    let answer=0;
-    for(let i = 0; i<a.length ; i++){
-     let result = a[i]*b[i];
-        answer += result;
-    }
-    return answer;
-}
+const solution=(a,b)=>a.reduce((a,c,i)=>a+c*(b[i]),0)

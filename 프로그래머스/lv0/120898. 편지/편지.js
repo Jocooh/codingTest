@@ -1,8 +1,4 @@
 function solution(message) {
-   let answer= message.split("").length
-   return answer *2
+    var answer = message.length*2;
+    return(answer);
 }
-
-//let str = 'Hello world, Java';
-//str = str.replace('Java', 'JavaScript');
-//console.log(str);

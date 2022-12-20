@@ -1,5 +1,5 @@
-function solution(s) {
-  p = s.toLowerCase().split("p").length;
-  y = s.toLowerCase().split("y").length;
-  return p == y ? true : false;
+function solution(s){
+    let a = s.toUpperCase().split('P').length
+    let b = s.toUpperCase().split('Y').length
+    return a===b?true:false
 }

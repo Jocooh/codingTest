@@ -3,7 +3,7 @@ function solution(n) {
     let result = Math.sqrt(n) //제곱근
     if(!Number.isInteger(result))answer = -1
     else{
-        answer = (result+1)*(result+1)
+        answer = Math.pow(result+1, 2)
      }
     return answer
 }

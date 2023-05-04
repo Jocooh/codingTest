@@ -1,10 +1,5 @@
 function solution(s) {
-    let arr = s.split(' ');
-   
-    let numArr = arr.map(e=> parseInt(e)).sort((a,b)=> a-b);
+    const arr = s.split(' ');
 
-    return `${numArr[0].toString()} ${numArr[numArr.length-1].toString()}`
-
+    return Math.min(...arr)+' '+Math.max(...arr);
 }
-
-//

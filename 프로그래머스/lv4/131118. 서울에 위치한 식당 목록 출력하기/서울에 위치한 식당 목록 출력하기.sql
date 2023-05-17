@@ -12,3 +12,4 @@ where
     A.ADDRESS LIKE "서울%"
 group by A.REST_ID
 ORDER BY SCORE DESC ,A.FAVORITES DESC
+

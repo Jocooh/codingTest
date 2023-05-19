@@ -11,4 +11,5 @@ function solution(n) {
   }
   return answer;
 }
-console.log(solution(4));
+
+//const waterMelon = (n) => '수박'.repeat(n).slice(0, n);

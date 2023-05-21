@@ -1,0 +1,17 @@
+-- 8월부터 10월까지 대여횟수가 5회 이상인 자동차ID의 월별 대여횟수 리스트 출력
+-- 월 기준 오름차순, 월이 같다면 자동차 ID 내림차순
+-- 특정 월의 총 대여 횟수가 0이라면 결과에서 제외
+SELECT MONTH(START_DATE) as MONTH, CAR_ID, COUNT(*) as RECORDS
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY o
+WHERE CAR_ID IN (
+    SELECT CAR_ID 
+    FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+    WHERE MONTH(START_DATE) BETWEEN 8 AND 10
+    GROUP BY CAR_ID
+    HAVING COUNT(*) >= 5)
+    AND MONTH(START_DATE) BETWEEN 8 AND 10
+GROUP BY MONTH, CAR_ID
+HAVING COUNT(*) > 0
+ORDER BY MONTH, CAR_ID DESC
+-- id 별 count 필요
+-- 월별로 카운팅 필요
